@@ -2,7 +2,7 @@
 + this repo includes sql lecture notes
 
 # Day 43
-+ I'm here https://www.w3schools.com/sql/default.asp
++ I'm here https://www.w3schools.com/sql/sql_null_values.asp
 - 12.02.2022
 
 > -  SELECT - extracts data from a database

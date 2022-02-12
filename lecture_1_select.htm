@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border:1px solid black;
+            text-align: center;
+            border-color:red;
+        }
+        th:hover, td:hover{
+            background-color:darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div><h1 style="text-align:center;">SQL DAY 1 - DBTC DAY 43</h1></div>
+    <div>
+        <table style="width:100%">
+        <tr>
+          <th>Command</th>
+          <th>Stands For</th>
+        </tr>
+        <tr>
+          <td>SELECT DISTINCT</td>
+          <td>Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+        </td>
+        <tr>
+            <td>SELECT COUNT(DISTINCT Country) FROM Customers;</td>
+            <td>Returns the count of the distinct country</td>
+        </tr>
+        <tr>
+            <td>SELECT COUNT(*) FROM Customers;</td>
+            <td>Returns the count of the all elements</td>
+        </tr>
+        <tr>
+            <td>SELECT * FROM Customers
+                WHERE City="Berlin";</td>
+            <td>Returns the filtered elements</td>
+        </tr>
+        <tr>
+            <td>SELECT * FROM Products
+                WHERE Price BETWEEN 50 AND 60;</td>
+            <td>Another example of filtering</td>
+        </tr>
+        <tr>
+            <td>SELECT * FROM Customers
+                WHERE Country LIKE 'B%';</td>
+            <td>This command retuns the elements which starts with B.</td>
+        </tr>
+        <tr>
+            <td>SELECT * FROM Customers
+                WHERE City IN ('Paris','London');</td>
+            <td>This command returns the elements filtered by Paris or London in City column</td>
+        </tr>
+        <tr>
+            <td>SELECT * FROM Customers
+                ORDER BY CustomerID DESC;
+                </td>
+            <td>This command returns the ordered data. DESC or ASC keyword determines the sorting direction.</td>
+        </tr>
+        <tr>
+            <td>INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+                VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');</td>
+            <td>Inserting new row. If we fill all elements of the table, we dont need to declare the title with pharanthesis</td>
+        </tr>
+        
+      </table>
+    </div>
+</body>
+</html>
