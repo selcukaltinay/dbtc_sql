@@ -1,0 +1,231 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border:1px solid black;
+            text-align: center;
+            border-color:red;
+        }
+        th:hover, td:hover{
+            background-color:darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div><h1 style="text-align:center;">SQL DAY 1 - DBTC DAY 43</h1></div>
+    <div>
+        <table style="width:100%">
+        <tr>
+            <td>Command</td>
+            <td>Discription</td>
+        </tr>
+        <tr>
+            <td>SELECT column_names
+                FROM table_name
+                WHERE column_name IS NULL;</td>
+            <td>Testing null values</td>
+        </tr>
+        <tr>
+            <td>SELECT column_names
+                FROM table_name
+                WHERE column_name IS NOT NULL;</td>
+            <td>Testing the data does not contain null values</td>
+        </tr>
+        <tr>
+            <td>UPDATE Customers
+                SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+                WHERE CustomerID = 1;</td>
+            <td>This command updates the value</td>
+        </tr>
+        <tr>
+            <td>DELETE FROM table_name WHERE condition;</td>
+            <td>Deletes the selected data</td>
+        </tr>
+        <tr>
+            <td>SELECT TOP 3 * FROM Customers</td>
+            <td>Selects top 3 row.</td>
+        </tr>
+        <tr>
+            <td>SELECT TOP 50 PERCENT * FROM Customers;</td>
+            <td>This command describes how to use percentage command.</td>
+        </tr>
+        <tr>
+            <td>SELECT * FROM Customers
+                WHERE Country='Germany'
+                LIMIT 2;</td>
+            <td>Limit keyword for search.</td>
+        </tr>
+        <tr>
+            <td>SELECT MAX(Price) FROM Products;</td>
+            <td>Returns the maximum value as price from products table.</td>
+        </tr>
+        <tr>
+            <td>SELECT COUNT(column_name)
+                FROM table_name
+                WHERE condition;</td>
+            <td>The COUNT() function returns the number of rows that matches a specified criterion.</td>
+        </tr>
+        <tr>
+            <td>SELECT AVG(column_name)
+                FROM table_name
+                WHERE condition;</td>
+            <td>The AVG() function returns the average value of a numeric column.</td>
+        </tr>
+        <tr>
+            <td>SELECT SUM(column_name)
+                FROM table_name
+                WHERE condition;</td>
+            <td>The SUM() function returns the total sum of a numeric column. </td>
+        </tr>
+        <tr>
+            <td>SELECT COUNT(ProductID)
+                FROM Products;</td>
+            <td>Note: NULL values are not counted.</td>
+        </tr>
+
+        <tr>
+            <td><table class="ws-table-all notranslate">
+                <tbody><tr>
+                  <th>LIKE Operator</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>WHERE CustomerName LIKE 'a%'</td>
+                  <td>Finds any values that start with "a"</td>
+                </tr>
+                <tr>
+                  <td>WHERE CustomerName LIKE '%a'</td>
+                  <td>Finds any values that end with "a"</td>
+                </tr>
+                <tr>
+                  <td>WHERE CustomerName LIKE '%or%'</td>
+                  <td>Finds any values that have "or" in any position</td>
+                </tr>
+                <tr>
+                  <td>WHERE CustomerName LIKE '_r%'</td>
+                  <td>Finds any values that have "r" in the second position</td>
+                </tr>
+                <tr>
+                  <td>WHERE CustomerName LIKE 'a_%'</td>
+                  <td>Finds any values that start with "a" and are at least 2 characters in length</td>
+                </tr>
+                <tr>
+                  <td>WHERE CustomerName LIKE 'a__%'</td>
+                  <td>Finds any values that start with "a" and are at least 3 characters in length</td>
+                </tr>
+                <tr>
+                  <td>WHERE ContactName LIKE 'a%o'</td>
+                  <td>Finds any values that start with "a" and ends with "o"</td>
+                </tr>
+              </tbody></table></td>
+            <td>LIKE Command
+            </td>
+        </tr>
+        <tr>
+            <td>SELECT CustomerName AS Customer, ContactName AS [Contact Person]
+                FROM Customers;</td>
+            <td>SQL aliases are used to give a table, or a column in a table, a temporary name.</td>
+        </tr>
+        <tr>
+            <td><ul>
+                <li><code class="w3-codespan">(INNER) JOIN</code>: Returns records that have matching values in both tables</li>
+                <li><code class="w3-codespan">LEFT (OUTER) JOIN</code>: Returns all records from the left table, and the matched records from the right table</li>
+                <li><code class="w3-codespan">RIGHT (OUTER) JOIN</code>: Returns all records from the right table, and the matched 
+                records from the left table</li>
+                <li><code class="w3-codespan">FULL (OUTER) JOIN</code>: Returns all records when there is a match in either left 
+                or right table</li>
+              </ul></td>
+            <td><p>
+                <img alt="SQL INNER JOIN" height="145" src="https://www.w3schools.com/sql/img_innerjoin.gif" width="200">&nbsp;
+                <img alt="SQL LEFT JOIN" height="145" src="https://www.w3schools.com/sql/img_leftjoin.gif" width="200">&nbsp;
+                <img alt="SQL RIGHT JOIN" height="145" src="https://www.w3schools.com/sql/img_rightjoin.gif" width="200">&nbsp;
+                <img alt="SQL FULL OUTER JOIN" height="145" src="https://www.w3schools.com/sql/img_fulljoin.gif" width="200">
+                </p></td>
+        </tr>
+        <tr>
+            <td>CREATE PROCEDURE procedure_name
+                AS
+                sql_statement
+                GO;<br>EXEC procedure_name;
+            </td>
+            <td>SQL Function</td>
+        </tr>
+      </table>
+      <br><br>
+      <table>
+          <tr>
+              <td>CREATE DATABASE databasename;</td>
+              <td>The CREATE DATABASE statement is used to create a new SQL database.</td>
+          </tr>
+          <tr>
+              <td>DROP DATABASE databasename;</td>
+              <td>Deletes the database</td>
+          </tr>
+          <tr>
+          <td>BACKUP DATABASE databasename
+            TO DISK = 'filepath';</td>
+          <td>BACKUP DATABASE databasename
+            TO DISK = 'filepath';</td>
+      </tr>
+      <tr>
+          <td>CREATE TABLE table_name (
+            column1 datatype,
+            column2 datatype,
+            column3 datatype,
+           ....
+        );</td>
+          <td>Create table</td>
+      </tr>
+      <tr>
+          <td>REATE TABLE Persons (
+            PersonID int,
+            LastName varchar(255),
+            FirstName varchar(255),
+            Address varchar(255),
+            City varchar(255)
+        );</td>
+          <td>Example of creating database</td>
+      </tr>
+      <tr>
+          <td>CREATE TABLE Persons (
+            ID int NOT NULL,
+            LastName varchar(255) NOT NULL,
+            FirstName varchar(255),
+            Age int,
+            PRIMARY KEY (ID)
+        );</td>
+          <td>Primary Key</td>
+      </tr>
+      <tr>
+          <td>uName = getRequestString("username");
+            uPass = getRequestString("userpassword");
+            
+            sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' + uPass + '"'</td>
+          <td>SQL Injection</td>
+      </tr>
+      <tr>
+          <td>txtNam = getRequestString("CustomerName");
+            txtAdd = getRequestString("Address");
+            txtCit = getRequestString("City");
+            txtSQL = "INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)";
+            db.Execute(txtSQL,txtNam,txtAdd,txtCit);</td>
+          <td>Avoiding from injection.</td>
+      </tr>
+      <tr>
+          <td>$stmt = $dbh->prepare("INSERT INTO Customers (CustomerName,Address,City)
+            VALUES (:nam, :add, :cit)");
+            $stmt->bindParam(':nam', $txtNam);
+            $stmt->bindParam(':add', $txtAdd);
+            $stmt->bindParam(':cit', $txtCit);
+            $stmt->execute();</td>
+          <td>SQL Injection for php</td>
+      </tr>
+    </table>
+      
+    </div>
+</body>
+</html>

@@ -16,3 +16,7 @@
 > -  DROP TABLE - deletes a table
 > -  CREATE INDEX - creates an index (search key)
 > -  DROP INDEX - deletes an index
+
+# Day 44
++ Completed
+- 13.02.2022
